@@ -26,7 +26,7 @@ class SASViewActivatable(GObject.Object, Gedit.ViewActivatable):
             GObject.source_remove(self.timeout_id)
 
         self.timeout_id = GObject.timeout_add(
-            500, self.maybe_save, priority=GObject.PRIORITY_LOW
+            3000, self.maybe_save, priority=GObject.PRIORITY_LOW
         )
 
     def maybe_save(self):
